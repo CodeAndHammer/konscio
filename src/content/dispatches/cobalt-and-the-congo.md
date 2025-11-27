@@ -3,7 +3,7 @@ title: "Cobalt and the Congo: The Dark Side of the Clean Energy Economy"
 author: "Timothy Brits"
 datePublished: 2025-11-16
 description: "How the rush for batteries, electric vehicles, and renewable technologies is recreating colonial patterns of extraction in Central Africa."
-excerpt: "A green transition that preserves extractive power is a false transition. Congo’s cobalt fuels batteries but not local prosperity. This essay maps the human, ecological, and political costs and outlines an alternative that centres democracy and repair."
+excerpt: "A green transition that preserves extractive power is a false transition. The Democratic Republic of Congo's cobalt fuels batteries but not local prosperity. This essay maps the human, ecological, and political costs and outlines an alternative that centres democracy and repair."
 image: /images/cobalt-and-the-congo.webp
 categories: ["Analysis"]
 tags: ["Green Colonialism", "Cobalt", "Climate Justice", "Africa"]
@@ -24,7 +24,7 @@ This kind of scene is common in the copper-cobalt belt of southeastern Congo. It
 
 Cobalt plays a stabilising role in many battery chemistries. It helps prevent overheating, improves cycle life, and supports higher energy density in professional and consumer applications. That is why the global push for electrification, from smartphones to grid storage, has made cobalt strategically important.
 
-The Congo sits at the centre of this mineral geography. The region’s ores are cheaper to access than many alternatives and have been integrated into global supply chains for decades. Because of that, control over cobalt is not simply an industrial question. It is a matter of geopolitical leverage, investment strategy, and development policy.
+The Democratic Republic of Congo sits at the centre of this mineral geography. The region's ores are cheaper to access than many alternatives and have been integrated into global supply chains for decades. This is why control over cobalt is not simply an industrial question. It is a matter of geopolitical leverage, investment strategy, and development policy.
 
 But geography alone does not determine who benefits. Patterns of ownership, legal frameworks, corporate practice, and state capacity determine where value accrues. In the current model, most of the value leaves the country long before the final battery is assembled.
 
