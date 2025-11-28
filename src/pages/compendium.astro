@@ -11,7 +11,13 @@ const pageDescription =
   "A collective knowledge base of socialist concepts, movements, and ideas.";
 ---
 
-<Layout title={pageTitle} description={pageDescription} showSidebar={false}>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  showSidebar={true}
+  sidebarMode="compendium"
+  sidebarCount={5}
+>
   <div class="compendium-page">
     <header class="compendium-header">
       <h1 class="compendium-title">{pageTitle}</h1>
