@@ -1,7 +1,6 @@
 ---
 title: "Imperial Core and Periphery"
 description: "A framework describing how wealthier nations maintain dominance over poorer regions through economic, political, and military power."
-category: "Theory"
 ---
 
 ## What Is the Imperial Core?

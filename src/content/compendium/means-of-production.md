@@ -1,7 +1,6 @@
 ---
 title: "Means of Production"
 description: "The tools, resources, and infrastructures used to produce goods, services, and social wealth."
-category: "Theory"
 ---
 
 ## What Are the Means of Production?

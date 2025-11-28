@@ -10,9 +10,6 @@ const mdPostsGlob = import.meta.glob("../content/dispatches/*.md", {
 const mdxPostsGlob = import.meta.glob("../content/dispatches/*.mdx", {
   eager: true,
 });
-const compendiumGlob = import.meta.glob("../content/compendium/*.md", {
-  eager: true,
-});
 
 const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)]
   .filter((post: any) => !post.frontmatter.draft)
@@ -25,14 +22,8 @@ const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)]
     return date <= new Date();
   }) as any[];
 
-const allCompendium = Object.values(compendiumGlob).filter(
-  (entry: any) => !entry.frontmatter.draft
-) as any[];
-
-const allContent = [...allPosts, ...allCompendium];
-
 const allCategories = new Set<string>();
-allContent.forEach((item: any) => {
+allPosts.forEach((item: any) => {
   if (item.frontmatter.category) {
     allCategories.add(item.frontmatter.category);
   }
@@ -40,7 +31,7 @@ allContent.forEach((item: any) => {
 
 const categoryMap: Record<string, any[]> = {};
 Array.from(allCategories).forEach((category: string) => {
-  categoryMap[category] = allContent.filter(
+  categoryMap[category] = allPosts.filter(
     (item: any) => item.frontmatter.category === category
   );
 });
