@@ -22,7 +22,7 @@ These histories tie directly to [imperialism](/compendium/imperialism) and conte
 
 ## Modern Examples
 
-- Fossil fuel conglomerates driving ecological collapse
+- Fossil fuel conglomerates driving ecological collapse, linking to [climate justice](/compendium/climate-justice)
 - Tech monopolies extracting user data for profit
 - Landlords accumulating wealth through rising rents
 - Financial institutions shaping global policy through debt
