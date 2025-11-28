@@ -1,6 +1,7 @@
 ---
 title: "Eco-Socialism"
 description: "A socialist tradition that anchors economic democracy in ecological limits and the fight against extractivism."
+category: "Ecology & Climate"
 ---
 
 ## What Is Eco-Socialism?

@@ -1,6 +1,7 @@
 ---
 title: "Kerala's Left Movement"
 description: "A long-standing democratic socialist project in the Indian state of Kerala, known for high social development and participatory governance."
+category: "Historical Movements"
 ---
 
 ## What Is Kerala’s Left Movement?

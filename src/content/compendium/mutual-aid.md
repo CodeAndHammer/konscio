@@ -1,6 +1,7 @@
 ---
 title: "Mutual Aid"
 description: "A practice of reciprocal, community-based support built on solidarity rather than hierarchy or profit."
+category: "Strategy & Organisation"
 ---
 
 ## What Is Mutual Aid?

@@ -1,6 +1,7 @@
 ---
 title: "Hegemony"
 description: "The way dominant groups maintain power by shaping culture, ideology, and common sense so that their rule appears natural."
+category: "Core Theory"
 ---
 
 ## What Is Hegemony?

@@ -1,6 +1,7 @@
 ---
-title: "Allende’s Chile"
+title: "Allende's Chile"
 description: "The democratic socialist project in Chile (1970–1973) that pursued social ownership, redistribution, and popular participation."
+category: "Historical Movements"
 ---
 
 ## What Was Allende’s Chile?

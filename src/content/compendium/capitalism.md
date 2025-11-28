@@ -1,6 +1,7 @@
 ---
 title: "Capitalism"
 description: "An economic system based on private ownership of the means of production, wage labour, and the pursuit of profit."
+category: "Core Theory"
 ---
 
 ## What Is Capitalism?

@@ -1,6 +1,7 @@
 ---
 title: "Black Panther Party"
 description: "A revolutionary Black organisation in the United States (1966–1982) focused on self-defence, community programs, and socialist politics."
+category: "Historical Movements"
 ---
 
 ## What Was the Black Panther Party?

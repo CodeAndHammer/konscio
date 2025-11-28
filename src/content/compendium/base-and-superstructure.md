@@ -1,6 +1,7 @@
 ---
 title: "Base and Superstructure"
 description: "A model describing how a society's economic foundation shapes its laws, politics, and culture."
+category: "Core Theory"
 ---
 
 ## What Are the Base and Superstructure?

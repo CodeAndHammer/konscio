@@ -1,6 +1,7 @@
 ---
 title: "Reification"
 description: "The process by which social relations and human activities appear as independent, object-like forces."
+category: "Core Theory"
 ---
 
 ## What Is Reification?

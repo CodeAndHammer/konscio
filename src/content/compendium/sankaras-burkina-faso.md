@@ -1,6 +1,7 @@
 ---
-title: "Sankara’s Burkina Faso"
-description: "A revolutionary transformation (1983–1987) focused on self-sufficiency, anti-imperialism, women’s liberation, and ecological restoration."
+title: "Sankara's Burkina Faso"
+description: "A revolutionary transformation (1983–1987) focused on self-sufficiency, anti-imperialism, women's liberation, and ecological restoration."
+category: "Historical Movements"
 ---
 
 ## What Was Sankara’s Burkina Faso?

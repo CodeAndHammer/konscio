@@ -1,6 +1,7 @@
 ---
 title: "Private Property"
 description: "Ownership of productive assets that generate profit through control of other people's labour."
+category: "Political Economy"
 ---
 
 ## What Is Private Property?

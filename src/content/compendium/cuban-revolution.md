@@ -1,6 +1,7 @@
 ---
 title: "Cuban Revolution"
 description: "The 1959 revolution that overthrew the Batista dictatorship and initiated a socialist transformation in Cuba."
+category: "Historical Movements"
 ---
 
 ## What Was the Cuban Revolution?

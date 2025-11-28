@@ -1,6 +1,7 @@
 ---
 title: "Anti-Imperialism"
 description: "A political stance opposing domination by powerful states and supporting the sovereignty and self-determination of oppressed nations."
+category: "Global South & Decolonisation"
 ---
 
 ## What Is Anti-Imperialism?

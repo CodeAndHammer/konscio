@@ -1,6 +1,7 @@
 ---
 title: "Public Goods"
 description: "Resources and services that should be collectively guaranteed because they are essential to human dignity and social well-being."
+category: "Strategy & Organisation"
 ---
 
 ## What Are Public Goods?

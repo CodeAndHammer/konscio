@@ -1,6 +1,7 @@
 ---
 title: "Social Reproduction"
 description: "The work and systems that sustain life—often unpaid or undervalued—such as caregiving, education, and community support."
+category: "Ecology & Climate"
 ---
 
 ## What Is Social Reproduction?
