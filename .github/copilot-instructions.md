@@ -9,6 +9,7 @@ Astro-powered static site publishing eco-socialist analysis and decolonial thoug
 ### Content System (Astro Content Collections)
 
 Two collections in `src/content/config.ts`:
+
 - **dispatches**: Long-form articles with `dispatchesSchema` (Zod validation in `src/schemas/dispatches.ts`)
   - Required: `title`, `datePublished`, `excerpt`, `category`, `tags`
   - Optional: `description`, `author`, `image`, `draft`, `dateModified`
@@ -67,6 +68,7 @@ npm run link-check   # Custom script (scripts/link-check.ts) validates external 
 ### Testing Strategy
 
 Tests in `tests/utils/` for pure functions only:
+
 - `slugify.test.ts`: URL slug generation
 - `table-of-contents.test.ts`: TOC extraction
 - `remark-reading-time.test.ts`: Reading time calculation
@@ -86,6 +88,7 @@ No component tests. Use `vitest --run` (jsdom environment from `vitest.config.ts
 6. Reading time: Calculated automatically, stored in `frontmatter.minutesRead`
 
 **Editorial standards** (see `EDITORIAL_GUIDELINES.md`):
+
 - UK English spelling ("organised", "labour")
 - Bold for first mention of "The Red Soil" and key actors
 - Italics for emphasis/calls to action
@@ -95,6 +98,7 @@ No component tests. Use `vitest --run` (jsdom environment from `vitest.config.ts
 ### Content Submission Paths
 
 Two methods documented in `.github/CONTRIBUTING.md`:
+
 1. Fork + PR (developers)
 2. Email to contact@theredsoil.co.za (writers)
 
@@ -121,6 +125,7 @@ src/
 ### Commit Message Format
 
 Prefix required:
+
 - `Add:` new features/content
 - `Fix:` bug fixes
 - `Update:` changes to existing features
@@ -130,6 +135,7 @@ Prefix required:
 ### Licensing
 
 **Dual license** (`LICENCE` file):
+
 - Code (src/, scripts/, etc.): MIT
 - Content (text, images, docs): CC0 1.0 Universal
 
@@ -149,6 +155,7 @@ Contributions automatically accepted under these terms.
 ### RSS Feed Generation
 
 `src/pages/rss.xml.js` uses `import.meta.glob` (not `getCollection`) to:
+
 1. Filter drafts (`frontmatter.draft !== true`)
 2. Filter future-dated posts (`datePublished <= Date.now()`)
 3. Sort by `datePublished` descending
