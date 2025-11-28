@@ -90,11 +90,9 @@ const sortedPosts = allPosts
                 <p class="post-excerpt">{post.frontmatter.excerpt}</p>
               )}
 
-              {post.frontmatter.categories && (
+              {post.frontmatter.category && (
                 <div class="post-categories">
-                  {post.frontmatter.categories.map((category: string) => (
-                    <span class="category">{category}</span>
-                  ))}
+                  <span class="category">{post.frontmatter.category}</span>
                 </div>
               )}
 

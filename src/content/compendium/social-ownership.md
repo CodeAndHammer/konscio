@@ -1,6 +1,7 @@
 ---
 title: "Social Ownership"
 description: "Collective control of major resources, enterprises, and infrastructure for public benefit rather than private profit."
+category: "Theory"
 ---
 
 ## What Is Social Ownership?

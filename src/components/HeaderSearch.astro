@@ -113,10 +113,7 @@
         (post: any) =>
           post.title.toLowerCase().includes(query) ||
           post.excerpt.toLowerCase().includes(query) ||
-          (post.categories &&
-            post.categories.some((cat: string) =>
-              cat.toLowerCase().includes(query)
-            ))
+          (post.category && post.category.toLowerCase().includes(query))
       )
       .slice(0, 10);
 
@@ -145,10 +142,10 @@
         ${post.datePublished ? `<time class="search-result-date">${new Date(post.datePublished).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</time>` : ""}
         ${post.excerpt ? `<p class="search-result-excerpt">${post.excerpt}</p>` : ""}
         ${
-          post.categories
+          post.category
             ? `
           <div class="search-result-categories">
-            ${post.categories.map((cat: string) => `<span class="search-category">${cat}</span>`).join(" ")}
+            <span class="search-category">${post.category}</span>
           </div>
         `
             : ""

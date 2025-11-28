@@ -10,6 +10,9 @@ export async function getStaticPaths() {
   const mdxPostsGlob = import.meta.glob("../../content/dispatches/*.mdx", {
     eager: true,
   });
+  const compendiumGlob = import.meta.glob("../../content/compendium/*.md", {
+    eager: true,
+  });
 
   const allPosts = [
     ...Object.values(mdPostsGlob),
@@ -23,42 +26,47 @@ export async function getStaticPaths() {
         return false;
       }
       return date <= new Date();
-    }) as any[];
+    })
+    .map((post: any) => ({ ...post, type: "dispatch" })) as any[];
+
+  const allCompendium = Object.values(compendiumGlob)
+    .filter((entry: any) => !entry.frontmatter.draft)
+    .map((entry: any) => ({ ...entry, type: "compendium" })) as any[];
+
+  const allContent = [...allPosts, ...allCompendium];
 
   const allCategories = new Set<string>();
-  allPosts.forEach((post: any) => {
-    if (post.frontmatter.categories) {
-      post.frontmatter.categories.forEach((category: string) => {
-        allCategories.add(category);
-      });
+  allContent.forEach((item: any) => {
+    if (item.frontmatter.category) {
+      allCategories.add(item.frontmatter.category);
     }
   });
 
   return Array.from(allCategories).map((category: string) => {
     const categorySlug = category.toLowerCase().replace(/[/\s]+/g, "-");
-    const postsInCategory = allPosts
-      .filter(
-        (post: any) =>
-          post.frontmatter.categories &&
-          post.frontmatter.categories.includes(category)
-      )
-      .sort(
-        (a: any, b: any) =>
-          new Date(b.frontmatter.datePublished).getTime() -
-          new Date(a.frontmatter.datePublished).getTime()
-      );
+    const itemsInCategory = allContent
+      .filter((item: any) => item.frontmatter.category === category)
+      .sort((a: any, b: any) => {
+        const aDate = a.frontmatter.datePublished
+          ? new Date(a.frontmatter.datePublished).getTime()
+          : 0;
+        const bDate = b.frontmatter.datePublished
+          ? new Date(b.frontmatter.datePublished).getTime()
+          : 0;
+        return bDate - aDate;
+      });
 
     return {
       params: { category: categorySlug },
       props: {
         category,
-        posts: postsInCategory,
+        items: itemsInCategory,
       },
     };
   });
 }
 
-const { category, posts } = Astro.props;
+const { category, items } = Astro.props;
 
 const base = config.baseUrl;
 ---
@@ -71,50 +79,55 @@ const base = config.baseUrl;
     <header class="page-header">
       <h1 class="page-title">{category}</h1>
       <p class="page-description">
-        {posts.length} dispatch{posts.length === 1 ? "" : "es"} in this category
+        {items.length}
+        {items.length === 1 ? "entry" : "entries"} in this category
       </p>
       <hr class="page-rule" />
     </header>
 
     <div class="posts-list">
       {
-        posts.map((post: any) => (
-          <article class="post-item">
-            <h2 class="post-title">
-              <a
-                href={`${base}dispatches/${slugifyPath(post.file)}`}
-                data-astro-prefetch
-              >
-                {post.frontmatter.title}
+        items.map((item: any) => {
+          const itemUrl =
+            item.type === "dispatch"
+              ? `${base}dispatches/${slugifyPath(item.file)}`
+              : `${base}compendium/${slugifyPath(item.file)}`;
+          const excerpt =
+            item.frontmatter.excerpt || item.frontmatter.description || "";
+
+          return (
+            <article class="post-item">
+              <h2 class="post-title">
+                <a href={itemUrl} data-astro-prefetch>
+                  {item.frontmatter.title}
+                </a>
+              </h2>
+
+              {item.frontmatter.datePublished && (
+                <div class="post-meta">
+                  <time
+                    class="post-date"
+                    datetime={item.frontmatter.datePublished}
+                  >
+                    {new Date(
+                      item.frontmatter.datePublished
+                    ).toLocaleDateString("en-GB", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                </div>
+              )}
+
+              {excerpt && <p class="post-excerpt">{excerpt}</p>}
+
+              <a href={itemUrl} data-astro-prefetch class="read-more">
+                Read More →
               </a>
-            </h2>
-
-            <div class="post-meta">
-              <time class="post-date" datetime={post.frontmatter.datePublished}>
-                {new Date(post.frontmatter.datePublished).toLocaleDateString(
-                  "en-GB",
-                  {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  }
-                )}
-              </time>
-            </div>
-
-            {post.frontmatter.excerpt && (
-              <p class="post-excerpt">{post.frontmatter.excerpt}</p>
-            )}
-
-            <a
-              href={`${base}dispatches/${slugifyPath(post.file)}`}
-              data-astro-prefetch
-              class="read-more"
-            >
-              Read More →
-            </a>
-          </article>
-        ))
+            </article>
+          );
+        })
       }
     </div>
 

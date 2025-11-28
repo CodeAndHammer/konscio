@@ -20,7 +20,7 @@ const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)]
 
 const categories = [
   ...new Set(
-    allPosts.flatMap((post: any) => post.frontmatter?.categories || [])
+    allPosts.map((post: any) => post.frontmatter?.category).filter(Boolean)
   ),
 ];
 ---

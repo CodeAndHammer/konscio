@@ -1,6 +1,7 @@
 ---
 title: "Commons"
 description: "Resources collectively managed by a community for shared use, based on cooperation and stewardship rather than profit."
+category: "Theory"
 ---
 
 ## What Are the Commons?

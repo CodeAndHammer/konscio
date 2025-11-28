@@ -109,11 +109,11 @@ const sortedPosts = allPosts
                     </p>
                   )}
 
-                  {post.frontmatter.categories && (
+                  {post.frontmatter.category && (
                     <div class="dispatches-post-categories">
-                      {post.frontmatter.categories.map((category: string) => (
-                        <span class="dispatches-category">{category}</span>
-                      ))}
+                      <span class="dispatches-category">
+                        {post.frontmatter.category}
+                      </span>
                     </div>
                   )}
                 </article>

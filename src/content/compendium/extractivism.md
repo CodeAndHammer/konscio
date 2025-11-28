@@ -1,6 +1,7 @@
 ---
 title: "Extractivism"
 description: "An economic model based on removing natural resources for export and profit, often through colonial or corporate domination."
+category: "Theory"
 ---
 
 ## What Is Extractivism?

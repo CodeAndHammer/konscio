@@ -34,9 +34,7 @@ export async function GET() {
           url: "/dispatches/" + post.slug,
           datePublished,
           excerpt: post.data.excerpt || post.data.description || "",
-          categories: Array.isArray(post.data.categories)
-            ? post.data.categories
-            : [],
+          category: post.data.category || null,
           type: "dispatch",
         };
       });
@@ -48,7 +46,7 @@ export async function GET() {
         url: "/compendium/" + entry.slug,
         datePublished: null,
         excerpt: entry.data.description || "",
-        categories: [],
+        category: entry.data.category || null,
         type: "compendium",
       }));
 

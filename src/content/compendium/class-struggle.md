@@ -1,6 +1,7 @@
 ---
 title: "Class Struggle"
 description: "The ongoing conflict between social classes over control of production, political power, and the conditions of life."
+category: "Theory"
 ---
 
 ## What Is Class Struggle?

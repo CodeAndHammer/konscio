@@ -92,7 +92,7 @@ datePublished: "YYYY-MM-DD"
 description: "Brief SEO description"
 author: "Your Name"
 excerpt: "Short summary for listings"
-categories: ["Category1", "Category2"]
+category: "Category"
 tags: ["tag1", "tag2"]
 image: "/images/your-open-graph-image.webp"
 ---
@@ -111,7 +111,7 @@ For a full guide to contributing articles—including required frontmatter, imag
 | `datePublished` | string  | Yes      | Publication date (YYYY-MM-DD)    |
 | `dateModified`  | string  | No       | Last modified date (YYYY-MM-DD)  |
 | `excerpt`       | string  | Yes      | Brief description for listings   |
-| `categories`    | array   | Yes      | Post categories                  |
+| `category`      | string  | Yes      | Post category                    |
 | `tags`          | array   | Yes      | Post tags                        |
 | `author`        | string  | No       | Author name (defaults to config) |
 | `image`         | string  | No       | Featured image path              |
