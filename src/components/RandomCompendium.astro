@@ -6,7 +6,7 @@ const base = config.baseUrl;
 
 interface Entry {
   file: string;
-  frontmatter: { title: string };
+  frontmatter: { title: string; category: string };
 }
 
 const { count = 6 } = Astro.props as { count?: number };
@@ -42,6 +42,9 @@ const randomEntries = pickRandom(entries, count);
           >
             {entry.frontmatter.title}
           </a>
+          {entry.frontmatter.category && (
+            <span class="post-category">{entry.frontmatter.category}</span>
+          )}
         </li>
       ))
     }
@@ -91,5 +94,15 @@ const randomEntries = pickRandom(entries, count);
   .post-link:hover,
   .post-link:focus {
     color: var(--color-accent);
+  }
+
+  .post-category {
+    display: inline-block;
+    margin-top: calc(var(--grid-unit) / 4);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
   }
 </style>

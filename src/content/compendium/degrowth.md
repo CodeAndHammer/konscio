@@ -1,6 +1,7 @@
 ---
 title: "Degrowth"
 description: "A movement advocating planned reductions in material and energy use to achieve ecological balance and social well-being."
+category: "Theory"
 ---
 
 ## What Is Degrowth?

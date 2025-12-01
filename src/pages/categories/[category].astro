@@ -10,6 +10,9 @@ export async function getStaticPaths() {
   const mdxPostsGlob = import.meta.glob("../../content/dispatches/*.mdx", {
     eager: true,
   });
+  const compendiumGlob = import.meta.glob("../../content/compendium/*.md", {
+    eager: true,
+  });
 
   const allPosts = [
     ...Object.values(mdPostsGlob),
@@ -23,10 +26,17 @@ export async function getStaticPaths() {
         return false;
       }
       return date <= new Date();
-    }) as any[];
+    })
+    .map((post: any) => ({ ...post, type: "dispatch" })) as any[];
+
+  const allCompendium = Object.values(compendiumGlob)
+    .filter((entry: any) => !entry.frontmatter.draft)
+    .map((entry: any) => ({ ...entry, type: "compendium" })) as any[];
+
+  const allContent = [...allPosts, ...allCompendium];
 
   const allCategories = new Set<string>();
-  allPosts.forEach((item: any) => {
+  allContent.forEach((item: any) => {
     if (item.frontmatter.category) {
       allCategories.add(item.frontmatter.category);
     }
@@ -34,7 +44,7 @@ export async function getStaticPaths() {
 
   return Array.from(allCategories).map((category: string) => {
     const categorySlug = category.toLowerCase().replace(/[/\s]+/g, "-");
-    const itemsInCategory = allPosts
+    const itemsInCategory = allContent
       .filter((item: any) => item.frontmatter.category === category)
       .sort((a: any, b: any) => {
         const aDate = a.frontmatter.datePublished
@@ -78,8 +88,12 @@ const base = config.baseUrl;
     <div class="posts-list">
       {
         items.map((item: any) => {
-          const itemUrl = `${base}dispatches/${slugifyPath(item.file)}`;
-          const excerpt = item.frontmatter.excerpt || "";
+          const itemUrl =
+            item.type === "dispatch"
+              ? `${base}dispatches/${slugifyPath(item.file)}`
+              : `${base}compendium/${slugifyPath(item.file)}`;
+          const excerpt =
+            item.frontmatter.excerpt || item.frontmatter.description || "";
 
           return (
             <article class="post-item">

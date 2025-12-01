@@ -1,6 +1,7 @@
 ---
 title: "Dialectical Materialism"
 description: "A way of understanding change through contradictions and the interplay of opposing forces in society and nature."
+category: "Theory"
 ---
 
 ## What Is Dialectical Materialism?
