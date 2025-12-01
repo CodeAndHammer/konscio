@@ -1,8 +1,6 @@
 ---
 import Layout from "../components/Layout.astro";
-import CompendiumWidget from "../components/CompendiumWidget.astro";
 import { slugifyPath } from "../utils/slugify";
-import { getCollection } from "astro:content";
 
 const mdPostsGlob = import.meta.glob("../content/dispatches/*.md", {
   eager: true,
@@ -39,14 +37,6 @@ const sortedPosts = allPosts
       new Date(a.frontmatter.datePublished).getTime()
   )
   .slice(0, 3);
-
-const compendiumEntries = (await getCollection("compendium"))
-  .filter((entry) => !entry.data.draft)
-  .map((entry) => ({
-    slug: entry.slug,
-    title: entry.data.title,
-    description: entry.data.description,
-  }));
 ---
 
 <Layout
@@ -141,8 +131,6 @@ const compendiumEntries = (await getCollection("compendium"))
         </div>
       </div>
     </section>
-
-    <CompendiumWidget entries={compendiumEntries} count={6} />
 
     <section class="features" id="features">
       <div class="container">
