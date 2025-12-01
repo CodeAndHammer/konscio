@@ -1,7 +1,6 @@
 ---
 title: "Imperialism"
 description: "The domination of one society by another through economic, political, or military power, often to secure resources or strategic advantage."
-category: "Theory"
 ---
 
 ## What Is Imperialism?

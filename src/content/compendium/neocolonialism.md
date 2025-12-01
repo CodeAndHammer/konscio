@@ -1,7 +1,6 @@
 ---
 title: "Neocolonialism"
 description: "A system where former colonial powers and global corporations maintain control through economic leverage, trade rules, and political pressure."
-category: "Theory"
 ---
 
 ## What Is Neocolonialism?

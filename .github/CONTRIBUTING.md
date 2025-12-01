@@ -105,7 +105,7 @@ You may submit dispatches or articles by either:
       description: "Brief SEO description"
       author: "Your Name"
       excerpt: "Short summary for listings"
-      category: "Category"
+      categories: ["Category1", "Category2"]
       tags: ["tag1", "tag2"]
       image: "/images/your-open-graph-image.webp"
       ---

@@ -1,7 +1,6 @@
 ---
 title: "Climate Justice"
 description: "A framework that links the climate crisis to inequality, colonialism, and the uneven distribution of harm and responsibility."
-category: "Theory"
 ---
 
 ## What Is Climate Justice?

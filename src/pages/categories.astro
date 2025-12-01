@@ -10,9 +10,6 @@ const mdPostsGlob = import.meta.glob("../content/dispatches/*.md", {
 const mdxPostsGlob = import.meta.glob("../content/dispatches/*.mdx", {
   eager: true,
 });
-const compendiumGlob = import.meta.glob("../content/compendium/*.md", {
-  eager: true,
-});
 
 const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)]
   .filter((post: any) => !post.frontmatter.draft)
@@ -25,23 +22,21 @@ const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)]
     return date <= new Date();
   }) as any[];
 
-const allCompendium = Object.values(compendiumGlob).filter(
-  (entry: any) => !entry.frontmatter.draft
-) as any[];
-
-const allContent = [...allPosts, ...allCompendium];
-
 const allCategories = new Set<string>();
-allContent.forEach((item: any) => {
-  if (item.frontmatter.category) {
-    allCategories.add(item.frontmatter.category);
+allPosts.forEach((post: any) => {
+  if (post.frontmatter.categories) {
+    post.frontmatter.categories.forEach((category: string) => {
+      allCategories.add(category);
+    });
   }
 });
 
 const categoryMap: Record<string, any[]> = {};
 Array.from(allCategories).forEach((category: string) => {
-  categoryMap[category] = allContent.filter(
-    (item: any) => item.frontmatter.category === category
+  categoryMap[category] = allPosts.filter(
+    (post: any) =>
+      post.frontmatter.categories &&
+      post.frontmatter.categories.includes(category)
   );
 });
 
@@ -62,8 +57,8 @@ const sortedCategories = Object.entries(categoryMap).sort((a: any, b: any) => {
     <header class="page-header">
       <h1 class="page-title">Categories</h1>
       <p class="page-description">
-        Browse dispatches and compendium entries organised by category. Click on
-        any category to see related content.
+        Browse dispatches organised by category. Click on any category to see
+        related dispatches.
       </p>
       <hr class="page-rule" />
     </header>
@@ -91,7 +86,7 @@ const sortedCategories = Object.entries(categoryMap).sort((a: any, b: any) => {
       sortedCategories.length === 0 && (
         <div class="no-categories">
           <p>
-            No categories found. Add a category field to your content
+            No categories found. Add categories to your dispatches in the
             frontmatter.
           </p>
         </div>

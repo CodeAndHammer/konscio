@@ -14,7 +14,7 @@ describe("search.json", () => {
           title: "Test Post 1",
           datePublished: new Date("2023-01-01"),
           excerpt: "Test excerpt 1",
-          category: "category1",
+          categories: ["category1"],
         },
         slug: "test-post-1",
       },
@@ -23,7 +23,7 @@ describe("search.json", () => {
           title: "Test Post 2",
           datePublished: new Date("2023-01-02"),
           description: "Test description 2",
-          category: "category2",
+          categories: ["category2"],
         },
         slug: "test-post-2",
       },
@@ -60,7 +60,7 @@ describe("search.json", () => {
         url: "/dispatches/test-post-2",
         datePublished: "2023-01-02T00:00:00.000Z",
         excerpt: "Test description 2",
-        category: "category2",
+        categories: ["category2"],
         type: "dispatch",
       },
       {
@@ -68,7 +68,7 @@ describe("search.json", () => {
         url: "/dispatches/test-post-1",
         datePublished: "2023-01-01T00:00:00.000Z",
         excerpt: "Test excerpt 1",
-        category: "category1",
+        categories: ["category1"],
         type: "dispatch",
       },
       {
@@ -76,7 +76,7 @@ describe("search.json", () => {
         url: "/compendium/eco-socialism",
         datePublished: null,
         excerpt: "A socialist tradition anchored in ecological limits",
-        category: null,
+        categories: [],
         type: "compendium",
       },
       {
@@ -84,7 +84,7 @@ describe("search.json", () => {
         url: "/compendium/socialism",
         datePublished: null,
         excerpt: "A political and economic tradition",
-        category: null,
+        categories: [],
         type: "compendium",
       },
     ]);
@@ -108,7 +108,7 @@ describe("search.json", () => {
     const response = await GET();
     const data = await response.json();
     expect(data[0].excerpt).toBe("");
-    expect(data[0].category).toBe(null);
+    expect(data[0].categories).toEqual([]);
     expect(data[0].type).toBe("dispatch");
   });
 

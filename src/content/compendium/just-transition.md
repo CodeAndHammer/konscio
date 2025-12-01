@@ -1,7 +1,6 @@
 ---
 title: "Just Transition"
 description: "A shift away from fossil fuels that protects workers, communities, and ecosystems instead of sacrificing them."
-category: "Theory"
 ---
 
 ## What Is a Just Transition?

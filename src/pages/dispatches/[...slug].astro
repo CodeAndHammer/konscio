@@ -91,69 +91,71 @@ const dateModified = frontmatter.dateModified
         <span class="post-reading-time">{frontmatter.minutesRead}</span>
 
         {
-          frontmatter.category && (
+          frontmatter.categories && frontmatter.categories.length > 0 && (
             <div class="post-categories">
-              <a
-                href={categoryPath(frontmatter.category)}
-                data-astro-prefetch
-                class="category-tag"
-              >
-                {frontmatter.category}
-              </a>
+              {frontmatter.categories.map((category: string) => (
+                <a
+                  href={categoryPath(category)}
+                  data-astro-prefetch
+                  class="category-tag"
+                >
+                  {category}
+                </a>
+              ))}
             </div>
           )
         }
       </div>
+
+      {frontmatter.excerpt && <p class="post-excerpt">{frontmatter.excerpt}</p>}
+
+      <hr class="monumental-rule" />
     </header>
 
-    {frontmatter.excerpt && <p class="post-excerpt">{frontmatter.excerpt}</p>}
+    <TableOfContents headings={tocHeadings} />
 
-    <hr class="monumental-rule" />
-  </article>
-
-  <TableOfContents headings={tocHeadings} />
-
-  <div class="post-content">
-    <Content />
-  </div>
-
-  <footer class="post-footer">
-    {
-      frontmatter.tags && frontmatter.tags.length > 0 && (
-        <div class="post-tags">
-          <span class="tags-label">Tags:</span>
-          <div class="tag-list">
-            {frontmatter.tags.map((tag: string) => (
-              <span class="tag">{tag}</span>
-            ))}
-          </div>
-        </div>
-      )
-    }
-
-    {
-      frontmatter.dateModified && (
-        <div class="post-modified-date">
-          <span>Last modified: </span>
-          <time datetime={frontmatter.dateModified}>
-            {new Date(frontmatter.dateModified).toLocaleDateString("en-GB", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
-        </div>
-      )
-    }
-
-    <div class="post-navigation">
-      <a
-        href={`${base}dispatches`}
-        data-astro-prefetch
-        class="back-to-dispatches">← Back to Dispatches</a
-      >
+    <div class="post-content">
+      <Content />
     </div>
-  </footer>
+
+    <footer class="post-footer">
+      {
+        frontmatter.tags && frontmatter.tags.length > 0 && (
+          <div class="post-tags">
+            <span class="tags-label">Tags:</span>
+            <div class="tag-list">
+              {frontmatter.tags.map((tag: string) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+        )
+      }
+
+      {
+        frontmatter.dateModified && (
+          <div class="post-modified-date">
+            <span>Last modified: </span>
+            <time datetime={frontmatter.dateModified}>
+              {new Date(frontmatter.dateModified).toLocaleDateString("en-GB", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+          </div>
+        )
+      }
+
+      <div class="post-navigation">
+        <a
+          href={`${base}dispatches`}
+          data-astro-prefetch
+          class="back-to-dispatches">← Back to Dispatches</a
+        >
+      </div>
+    </footer>
+  </article>
 </Layout>
 
 <style>

@@ -1,7 +1,6 @@
 ---
 title: "Communism"
 description: "A classless, stateless society envisioned as the long-term outcome of socialist transformation."
-category: "Theory"
 ---
 
 ## What Is Communism?

@@ -9,7 +9,6 @@ import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import yaml from "eslint-plugin-yaml";
 import { defineConfig } from "eslint/config";
-import oxlint from "eslint-plugin-oxlint";
 
 const jsFiles = ["*.js", "*.mjs"];
 const tsFiles = ["*.ts"];
@@ -20,8 +19,8 @@ const yamlFiles = ["*.yaml", "*.yml"];
 const markdownFiles = ["*.md"];
 const unicornFiles = ["*.js", "*.ts", "*.mjs", "*.astro"];
 
-const jsPlugins = { sonarjs, oxlint };
-const tsPlugins = { "@typescript-eslint": ts, sonarjs, oxlint };
+const jsPlugins = { sonarjs };
+const tsPlugins = { "@typescript-eslint": ts, sonarjs };
 const astroPlugins = { astro };
 const cssPlugins = { css };
 const jsonPlugins = { json };
@@ -39,7 +38,6 @@ export default defineConfig(
     rules: {
       ...eslint.configs.recommended.rules,
       ...sonarjs.configs.recommended.rules,
-      ...oxlint.configs["flat/recommended"].rules,
     },
   },
   {
@@ -48,7 +46,6 @@ export default defineConfig(
     rules: {
       ...ts.configs.recommended.rules,
       ...sonarjs.configs.recommended.rules,
-      ...oxlint.configs["flat/recommended"].rules,
     },
   },
   {
