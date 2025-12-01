@@ -188,6 +188,7 @@ const { base = "" } = Astro.site ? { base: config.baseUrl } : { base: "" };
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: calc(var(--grid-unit) * 2);
   }
 
@@ -207,7 +208,7 @@ const { base = "" } = Astro.site ? { base: config.baseUrl } : { base: "" };
   .header-controls {
     display: flex;
     align-items: center;
-    gap: calc(var(--grid-unit) * 2);
+    gap: calc(var(--grid-unit) * 3);
     flex-shrink: 0;
   }
 
@@ -284,7 +285,7 @@ const { base = "" } = Astro.site ? { base: config.baseUrl } : { base: "" };
     outline: none;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     .site-header {
       padding: calc(var(--grid-unit) * 2) 0;
     }
