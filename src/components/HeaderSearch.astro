@@ -142,7 +142,13 @@
         <h3 class="search-result-title">
           <a href="${base}${post.url.startsWith("/") ? post.url.slice(1) : post.url}">${post.title}</a>
         </h3>
-        ${post.datePublished ? `<time class="search-result-date">${new Date(post.datePublished).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</time>` : ""}
+        <time class="search-result-date">${new Date(
+          post.datePublished
+        ).toLocaleDateString("en-GB", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}</time>
         ${post.excerpt ? `<p class="search-result-excerpt">${post.excerpt}</p>` : ""}
         ${
           post.categories
