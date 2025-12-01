@@ -1,7 +1,6 @@
 ---
 title: "Decolonisation"
 description: "The process of dismantling colonial power structures, restoring autonomy, and rebuilding social and ecological relations on just foundations."
-category: "Global South & Decolonisation"
 ---
 
 ## What Is Decolonisation?

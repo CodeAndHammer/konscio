@@ -1,7 +1,6 @@
 ---
 title: "Capital Accumulation"
 description: "The process through which capital expands by reinvesting profit extracted from labour, shaping the dynamics of capitalism."
-category: "Political Economy"
 ---
 
 ## What Is Capital Accumulation?

@@ -1,7 +1,6 @@
 ---
 title: "Unequal Exchange"
 description: "A global process where labour and resources from poorer regions are undervalued, enabling wealth transfer to richer countries."
-category: "Global South & Decolonisation"
 ---
 
 ## What Is Unequal Exchange?

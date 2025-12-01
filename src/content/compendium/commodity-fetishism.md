@@ -1,7 +1,6 @@
 ---
 title: "Commodity Fetishism"
 description: "The way market systems conceal the labour, exploitation, and social relationships behind the goods we buy."
-category: "Core Theory"
 ---
 
 ## What Is Commodity Fetishism?

@@ -1,7 +1,6 @@
 ---
 title: "Neoliberalism"
 description: "A political and economic project that expands market power, weakens social protections, and reshapes society around competition and private profit."
-category: "Political Economy"
 ---
 
 ## What Is Neoliberalism?

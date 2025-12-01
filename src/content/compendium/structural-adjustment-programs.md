@@ -1,7 +1,6 @@
 ---
 title: "Structural Adjustment Programs"
 description: "Economic reform packages imposed by international financial institutions that enforce privatisation, deregulation, and austerity on borrowing nations."
-category: "Global South & Decolonisation"
 ---
 
 ## What Are Structural Adjustment Programs?

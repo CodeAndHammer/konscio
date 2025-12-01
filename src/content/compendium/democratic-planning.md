@@ -1,7 +1,6 @@
 ---
 title: "Democratic Planning"
 description: "A system of collective decision-making that coordinates production and distribution based on social need rather than profit."
-category: "Strategy & Organisation"
 ---
 
 ## What Is Democratic Planning?

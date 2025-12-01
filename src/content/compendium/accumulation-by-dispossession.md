@@ -1,7 +1,6 @@
 ---
 title: "Accumulation by Dispossession"
 description: "The ongoing process where capital expands by taking land, resources, and rights from communities."
-category: "Political Economy"
 ---
 
 ## What Is Accumulation by Dispossession?

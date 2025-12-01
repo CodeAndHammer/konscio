@@ -1,7 +1,6 @@
 ---
 title: "Zapatismo (EZLN)"
 description: "A contemporary Indigenous-led movement in Chiapas, Mexico, focused on autonomy, direct democracy, and resistance to neoliberalism."
-category: "Historical Movements"
 ---
 
 ## What Is Zapatismo?

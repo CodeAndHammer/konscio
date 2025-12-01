@@ -1,7 +1,6 @@
 ---
 title: "Planetary Boundaries"
 description: "Scientific limits that define a safe operating space for humanity within Earth's ecological systems."
-category: "Ecology & Climate"
 ---
 
 ## What Are Planetary Boundaries?

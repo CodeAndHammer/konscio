@@ -1,7 +1,6 @@
 ---
 title: "The State"
 description: "The set of institutions that administer society and enforce political and economic order."
-category: "Core Theory"
 ---
 
 ## What Is the State?

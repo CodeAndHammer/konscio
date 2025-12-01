@@ -1,7 +1,6 @@
 ---
 title: "Modes of Production"
 description: "The overarching ways societies organise labour, resources, and ownership, shaping their class structure and historical development."
-category: "Political Economy"
 ---
 
 ## What Are Modes of Production?

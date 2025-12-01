@@ -1,7 +1,6 @@
 ---
 title: "Historical Materialism"
 description: "A method for understanding how societies change through shifts in material conditions and economic structures."
-category: "Core Theory"
 ---
 
 ## What Is Historical Materialism?

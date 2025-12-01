@@ -1,7 +1,6 @@
 ---
 title: "Surplus Value"
 description: "The value created by workers that is taken by owners as profit."
-category: "Political Economy"
 ---
 
 ## What Is Surplus Value?

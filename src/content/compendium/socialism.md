@@ -1,7 +1,6 @@
 ---
 title: "Socialism"
 description: "A political and economic tradition that aims for democratic control of the economy, collective well-being, and the end of exploitation."
-category: "Core Theory"
 ---
 
 ## What Is Socialism?

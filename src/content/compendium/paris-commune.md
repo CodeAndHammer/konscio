@@ -1,7 +1,6 @@
 ---
 title: "Paris Commune"
 description: "A short-lived 1871 revolutionary government in Paris that became a foundational example of working-class democracy and self-governance."
-category: "Historical Movements"
 ---
 
 ## What Was the Paris Commune?

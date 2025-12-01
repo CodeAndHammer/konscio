@@ -1,7 +1,6 @@
 ---
 title: "Austerity"
 description: "A policy approach that cuts public spending and social programs in the name of fiscal discipline, often worsening inequality and undermining social well-being."
-category: "Political Economy"
 ---
 
 ## What Is Austerity?

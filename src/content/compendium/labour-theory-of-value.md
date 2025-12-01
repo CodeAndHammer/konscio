@@ -1,7 +1,6 @@
 ---
 title: "Labour Theory of Value"
 description: "The idea that labour creates the value of commodities and that profit comes from unpaid labour."
-category: "Political Economy"
 ---
 
 ## What Is the Labour Theory of Value?

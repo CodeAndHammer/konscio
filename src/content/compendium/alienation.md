@@ -1,7 +1,6 @@
 ---
 title: "Alienation"
 description: "The separation of people from their labour, community, and sense of meaning under exploitative economic systems."
-category: "Core Theory"
 ---
 
 ## What Is Alienation?

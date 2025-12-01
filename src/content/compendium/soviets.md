@@ -1,7 +1,6 @@
 ---
 title: "Soviets"
 description: "Worker and soldier councils in revolutionary Russia that operated as organs of direct, democratic power."
-category: "Strategy & Organisation"
 ---
 
 ## What Are Soviets?

@@ -1,7 +1,6 @@
 ---
 title: "Indigenous Sovereignty"
 description: "The inherent right of Indigenous peoples to govern their lands, cultures, and political futures."
-category: "Global South & Decolonisation"
 ---
 
 ## What Is Indigenous Sovereignty?

@@ -1,7 +1,6 @@
 ---
 title: "Just Energy Transition"
 description: "A fair and democratic shift from fossil fuels to renewable energy that avoids reproducing exploitation, displacement, or green colonialism."
-category: "Ecology & Climate"
 ---
 
 ## What Is a Just Energy Transition?

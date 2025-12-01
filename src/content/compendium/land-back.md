@@ -1,7 +1,6 @@
 ---
 title: "Land Back"
 description: "A movement demanding the restoration of land, autonomy, and stewardship to Indigenous peoples."
-category: "Global South & Decolonisation"
 ---
 
 ## What Is Land Back?

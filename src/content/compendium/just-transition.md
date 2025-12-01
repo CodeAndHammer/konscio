@@ -1,7 +1,6 @@
 ---
 title: "Just Transition"
 description: "A framework for moving away from harmful economic systems while ensuring that workers, communities, and ecosystems are protected and empowered."
-category: "Ecology & Climate"
 ---
 
 ## What Is a Just Transition?
