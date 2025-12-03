@@ -1,6 +1,6 @@
 import fs from "fs";
-import path from "path";
 import linkCheck from "link-check";
+import path from "path";
 
 const CONTENT_DIRS = [path.join(process.cwd(), "src")];
 
@@ -56,7 +56,7 @@ async function checkLinks(links: string[]): Promise<{ url: string; status: strin
   return results;
 }
 
-export { getSourceFiles, extractLinks, checkLinks };
+export { checkLinks, extractLinks, getSourceFiles };
 export async function checkAllExternalLinks() {
   let allLinks: string[] = [];
   for (const dir of CONTENT_DIRS) {

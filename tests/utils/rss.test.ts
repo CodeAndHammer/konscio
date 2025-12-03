@@ -1,6 +1,7 @@
 import rss from "@astrojs/rss";
+import type { APIContext } from "astro";
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { GET } from "../../src/pages/rss.xml.js";
+import { GET } from "../../src/pages/rss.xml.ts";
 
 vi.mock("@astrojs/rss", () => ({
   default: vi.fn(() => ({ status: 200, body: "rss content" })),
@@ -13,19 +14,24 @@ vi.mock("../../src/config", () => ({
   },
 }));
 
+const createContext = (site?: string): APIContext =>
+  ({
+    site: site ? new URL(site) : undefined,
+  }) as unknown as APIContext;
+
 describe("rss.xml", () => {
   beforeEach(() => {
     vi.clearAllMocks();
   });
   it("should generate RSS feed with correct structure", async () => {
-    const context = { site: "https://example.com" };
+    const context = createContext("https://example.com") as any;
     await GET(context);
 
     expect(rss).toHaveBeenCalledWith(
       expect.objectContaining({
         title: "Test Site",
         description: "Test Description",
-        site: "https://example.com",
+        site: expect.any(URL),
         items: expect.any(Array),
         customData: expect.stringContaining(
           '<atom:link href="https://example.com/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom"/>'
@@ -42,14 +48,14 @@ describe("rss.xml", () => {
     expect(callArgs.items[0].link).toMatch(/^\/dispatches\//);
 
     if (callArgs.items.length > 1) {
-      expect(new Date(callArgs.items[0].pubDate).getTime()).toBeGreaterThanOrEqual(
-        new Date(callArgs.items[1].pubDate).getTime()
+      expect(callArgs.items[0].pubDate.getTime()).toBeGreaterThanOrEqual(
+        callArgs.items[1].pubDate.getTime()
       );
     }
   });
 
   it("should handle empty collection", async () => {
-    const context = { site: "https://example.com" };
+    const context = createContext("https://example.com") as any;
     await GET(context);
 
     const callArgs = (rss as any).mock.calls[0][0];
@@ -57,10 +63,10 @@ describe("rss.xml", () => {
   });
 
   it("should handle context without site URL", async () => {
-    const context = {};
+    const context = createContext() as any;
     await GET(context);
 
     const callArgs = (rss as any).mock.calls[0][0];
-    expect(callArgs.site).toBeUndefined();
+    expect(callArgs.site).toBeInstanceOf(URL);
   });
 });

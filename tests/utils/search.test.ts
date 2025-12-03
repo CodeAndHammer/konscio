@@ -1,10 +1,13 @@
+import type { APIContext } from "astro";
 import { getCollection } from "astro:content";
 import { describe, expect, it, vi } from "vitest";
-import { GET } from "../../src/pages/search.json.js";
+import { GET } from "../../src/pages/search.json.ts";
 
 vi.mock("astro:content", () => ({
   getCollection: vi.fn(),
 }));
+
+const createContext = (): APIContext => ({}) as APIContext;
 
 describe("search.json", () => {
   it("should return search data for dispatches", async () => {
@@ -31,7 +34,7 @@ describe("search.json", () => {
 
     (getCollection as any).mockResolvedValue(mockPosts);
 
-    const response = await GET();
+    const response = await GET(createContext());
     expect(response.status).toBe(200);
 
     const data = await response.json();
@@ -66,7 +69,7 @@ describe("search.json", () => {
 
     (getCollection as any).mockResolvedValue(mockPosts);
 
-    const response = await GET();
+    const response = await GET(createContext());
     const data = await response.json();
     expect(data[0].excerpt).toBe("");
     expect(data[0].categories).toEqual([]);
@@ -94,7 +97,7 @@ describe("search.json", () => {
 
     (getCollection as any).mockResolvedValue(mockPosts);
 
-    const response = await GET();
+    const response = await GET(createContext());
     const data = await response.json();
     expect(data[0].title).toBe("Newer Post");
     expect(data[1].title).toBe("Older Post");
@@ -122,7 +125,7 @@ describe("search.json", () => {
 
     (getCollection as any).mockResolvedValue(mockPosts);
 
-    const response = await GET();
+    const response = await GET(createContext());
     expect(response.status).toBe(200);
     const data = await response.json();
     expect(data.length).toBe(1);
@@ -132,7 +135,7 @@ describe("search.json", () => {
   it("should handle getCollection throwing an error", async () => {
     (getCollection as any).mockRejectedValue(new Error("Collection error"));
 
-    const response = await GET();
+    const response = await GET(createContext());
     expect(response.status).toBe(200);
     const data = await response.json();
     expect(data).toEqual([]);
@@ -147,7 +150,7 @@ describe("search.json", () => {
 
     (getCollection as any).mockResolvedValue(mockPosts);
 
-    const response = await GET();
+    const response = await GET(createContext());
     const data = await response.json();
     expect(data).toEqual([]);
   });
@@ -185,7 +188,7 @@ describe("search.json", () => {
 
     (getCollection as any).mockResolvedValue(mockPosts);
 
-    const response = await GET();
+    const response = await GET(createContext());
     const data = await response.json();
     expect(data.length).toBe(1);
     expect(data[0].title).toBe("Past Post");

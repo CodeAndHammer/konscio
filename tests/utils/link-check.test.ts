@@ -1,6 +1,6 @@
 import fs from "fs";
-import path from "path";
 import linkCheck from "link-check";
+import path from "path";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   checkAllExternalLinks,
