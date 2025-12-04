@@ -11,9 +11,9 @@ tags: ["COP30", "Fossil Fuels", "Climate Justice", "Eco-Socialism", "Global Sout
 
 # COP30: A Summit Captured by Fossil Power
 
-COP30 was presented as the moment the world would confront reality. It was hosted in the Amazon, wrapped in language about planetary urgency, and framed as a turning point for a liveable future. Instead it became the clearest example yet of how climate diplomacy has lost its anchor. The summit admitted almost fifteen hundred fossil fuel lobbyists, more than the delegations of many nations most exposed to climate breakdown. The final declaration avoided the words that matter. It refused to commit to a phase-out of fossil fuels. It refused to name the root of the crisis.
+COP30 was presented as the moment the world would confront reality; it was hosted in the Amazon, wrapped in language about planetary urgency, and framed as a turning point for a liveable future. Instead it became the clearest example yet of how climate diplomacy has lost its anchor. The summit admitted almost fifteen hundred fossil fuel lobbyists, more than the delegations of many nations most exposed to climate breakdown, and the final declaration avoided the words that matter. It refused to commit to a phase-out of fossil fuels and refused to name the root of the crisis.
 
-This is not a failure of drafting. It is not a technical hiccup. It is a political decision shaped by the power of an industry that has learned how to write the rules while pretending to follow them.
+This is not a failure of drafting, nor a technical hiccup. It is a political decision shaped by the power of an industry that has learned how to write the rules whilst pretending to follow them.
 
 ---
 
@@ -57,7 +57,7 @@ The hypocrisy is sharp. The same countries that demand climate discipline from t
 
 ## The rise of industry friendly climate narratives
 
-The fossil lobby does not deny the crisis. It reframes it. It promotes carbon capture as a rescue tool despite limited scalability. It brands hydrogen as clean even when produced from gas. It champions offsets to justify continued pollution. It supports speculative future technologies that do not yet exist at scale. All of these narratives serve to protect extraction.
+The fossil lobby does not deny the crisis; it reframes it. It promotes carbon capture as a rescue tool despite limited scalability, brands hydrogen as clean even when produced from gas, champions offsets to justify continued pollution, and supports speculative future technologies that do not yet exist at scale. All of these narratives serve to protect extraction.
 
 Inside COP30 these ideas shaped discussions and side events. They offered a polished cover for inaction. They allowed governments to claim ambition while avoiding the substance of transition. The industry has learned that it does not need denial. It only needs delay.
 
